@@ -1,0 +1,26 @@
+Features
+1 . Date: The date of the journey
+
+2 . Airline: The name of the airline
+
+3 . Ch-Code: the airline code
+
+4 . Dep_Time: The time when the journey starts from the source.
+
+5 . Time_Taken: Total duration of the flight.
+
+6 . Total_Stops: Total stops between the source and destination.
+
+7 . Arrival_Time: Time of arrival at the destination.
+
+8 . Route: This contains information on starting and ending location of the journey in the standard format used by airlines.
+
+	. Source: The source from which the service begins.
+      . Destination: The destination where the service ends.
+
+9 . Num_Code: The number which describes the sequence of journeys.
+
+10. Type: ...
+
+Target
+Price: The price of the ticket
