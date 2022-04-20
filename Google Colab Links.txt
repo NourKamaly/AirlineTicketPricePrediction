@@ -2,6 +2,21 @@ Data Anaysis notebook
 
 https://colab.research.google.com/drive/1vz3UFDSIbNn6tRCMMmXsDiNlNec1LiH1?usp=sharing
 
+
+
 Preprocessing notebook 
 
 https://colab.research.google.com/drive/1luUiJ-tljuguoFSX4Cjc1u8ZLrl3nhVc?usp=sharing
+
+
+
+Modeling
+
+Frequency-domain Dataset: 
+https://colab.research.google.com/drive/1bU_iZL7P9ABw4Ok8SrutdDAEFk8Ezvzu?usp=sharing
+
+One-hot-encoded Dataset:
+https://colab.research.google.com/drive/19GAp3SeI2Ic7GPPhW4zBPxXBCzMJMlzb?usp=sharing
+
+Target Dataset:
+https://colab.research.google.com/drive/11w1S6giTnmvuXaysyrUFg32QkmxV59tp?usp=sharing
