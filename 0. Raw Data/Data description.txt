@@ -1,0 +1,27 @@
+Features
+1. Date: The date of the journey
+
+2. Airline: The name of the airline
+
+3. Ch code: the airline code
+
+4. Num code: The number which describes the sequence of journeys.
+
+5. Dep time: The time when the journey starts from the source.
+
+6. Time taken: Total duration of the flight.
+
+7. Total stops: Total stops between the source and destination.
+
+8. Arrival time: Time of arrival at the destination.
+
+9. Type: wether the flight was in economy or business class 
+
+10. Route: This contains information on starting and ending location of the journey in the standard format used by airlines.
+       . Source: The source from which the service begins.
+       . Destination: The destination where the service ends.
+
+
+Target
+Price: The price of the ticket
+Category : wether the ticket is considered cheap,moderate, expensive or very expensive
