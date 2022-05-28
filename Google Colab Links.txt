@@ -9,6 +9,7 @@ Preprocessing notebook
 https://colab.research.google.com/drive/1luUiJ-tljuguoFSX4Cjc1u8ZLrl3nhVc?usp=sharing
 
 
+-------------------------------------------------------------Regression------------------------------------------------------------------------------
 
 Modeling
 
@@ -21,5 +22,10 @@ https://colab.research.google.com/drive/19GAp3SeI2Ic7GPPhW4zBPxXBCzMJMlzb?usp=sh
 Target Dataset:
 https://colab.research.google.com/drive/11w1S6giTnmvuXaysyrUFg32QkmxV59tp?usp=sharing
 
-Arificial Neural Network:
+Artificial Neural Network:
 https://colab.research.google.com/drive/1a3P2dbm6oz5WL-v2UiiQMYPJbcx43Uzx?usp=sharing
+
+-------------------------------------------------------------Classification------------------------------------------------------------------------------
+
+Modeling:
+https://colab.research.google.com/drive/1mysl81eQCLLz36v5ojP-2b1UR3RsKTaR?usp=sharing
