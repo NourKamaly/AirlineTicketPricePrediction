@@ -15,10 +15,10 @@ to prevent data leakage when splittling the data into the training and validatio
 7. Feature engineering applied to the other features
 8. Data transformation using the discrete cosine transform as this is a time series data (we suspected that the data may have been periodic)
 ![time series data](https://user-images.githubusercontent.com/76780379/170845001-c72271a3-f6b0-4886-bdf2-d2d2e7058622.jpg)
-The preprocessing phase resulted in 3 different dataset and training was done on each one of them separatly
+Mutlliple encoders were used and this resulted in 3 different dataset and training was done on each one of them separatly
 # Modeling :
 
-10 models were used 
+10 models were used in Regression
 1. eXtreme Gradient Boosting Regressor
 2. Poissom Regressor
 3. Histogram Gradient Boosting Regressor
@@ -33,5 +33,18 @@ The preprocessing phase resulted in 3 different dataset and training was done on
 Random Forest got the best r2 score in the regression testing set (0.9555) so it was chosen as the final regression model
 ![Random Forest](https://user-images.githubusercontent.com/76780379/170845111-a8631ed3-92ed-4378-932c-eccfd3714c87.jpg)
 
+9 models were used in classification
+1. Ada Boost
+2. Gradient Boosting Classifier
+3. Bagging Classifier
+4. Random Forest    
+5. eXtreme Gradient Boosting Classifier
+6. Decision Tree Classifier
+7. Histogram Gradient Boosting Classifier     
+8. Extra Tree Classifier 
+9. Ensemble Stacking model that consists of RF, bagging classifier , extra tree classifier (the best performing models) 
+
 # Deployment:
-Deployment was done using CSS & bootstrap for the interface and the backened was made by Flask
+Deployment was done using HTML & CSS & bootstrap for the interface and the backened was made by Flask
+
+![ML interface](https://user-images.githubusercontent.com/76780379/170869444-c5a1a0a8-7da9-4d71-b140-4ba6d892c25d.jpeg)
