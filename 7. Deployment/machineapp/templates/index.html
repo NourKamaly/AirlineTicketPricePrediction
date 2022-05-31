@@ -9,11 +9,11 @@
 
 	<link rel="stylesheet" href="/static/https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-	<link rel="stylesheet" href="E:\Computer Science\Projects\Junior Year - Term 2\Machine Learning\AirlineTicketPricePrediction\7. Deployment\machineapp\static\css\style.css">
+	<link rel="stylesheet" href="/static/css/style.css">
 
 	</head>
 	<body>
-	<form action="/predict" method="get" class="ftco-section img bg-hero" style="background-image:url(/static/images/bg_1.jpg);">
+	<form action="/predict" method="get" class="ftco-section img bg-hero" style="background-image: url(/static/images/bg_1.jpg);">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
@@ -33,7 +33,20 @@
 				        			<span class="fa fa-globe"></span>
 				        		</div>
 				        		<div class="text pl-4">
-					            <!-- <p><span>The Formatted Predicted Price is: </span> <a><b>...</b></a></p> -->
+								{% if price %}	
+					            <p style="color:rgb(208, 208, 220); font-size: 20px;">The Predicted Price is: <span><b style="color:rgb(255, 255, 255); font-size: 20px;" >{{ price }} $</b></span><span></p>
+								{% endif %}
+                                <script>
+									function myFunction() {
+									  alert("Unfortunately!'\n'This flight is not available'\n'Choose another Source And Destination.");
+									}
+								</script>
+
+								{% if validatSourceDestination %}
+								<script>
+									myFunction.call()
+								</script>
+								{% endif %}
 					          </div>
 				          </div>
 			          </div>
@@ -55,18 +68,18 @@
 											</div>
 											<div class="col-md-12"> 
 												<div class="form-group">
-													<input type="text" class="form-control" name="date" id="date" placeholder="D/M/Y">
+													<input type="date" class="form-control" name="date" id="date" placeholder="D/M/Y" required>
 												</div>
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
-													<span>Airport</span>
+													<span>Airline</span>
 												</div>
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
 
-													<select name="Airport" id="cars" class="form-control" name="Airline" id="Airline" placehoder="Airport">
+													<select name="Airline" id="cars" class="form-control" id="Airline" placehoder="Airline" required>
 														<option value="Vistara">Vistara</option>
 														<option value="AirAsia">AirAsia</option>
 														<option value="GO FIRST">GO FIRST</option>
@@ -87,9 +100,23 @@
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
-													<input type="string" class="form-control" name="departuretime" id="departure time" placeholder="ex: 00:00">
+													<input type="time" class="form-control" name="departuretime" id="departure time" required>
 												</div>
 											</div>
+
+											<div class="col-md-12">
+												<div class="form-group">
+													<span>Taken Time</span>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="string" class="form-control" name="takentime" id="takentime time" placeholder="ex: 00h 00m" required>
+												</div>
+											</div>
+
+
+
 
 											<div class="col-md-12">
 												<div class="form-group">
@@ -99,10 +126,10 @@
 											<div class="col-md-12">
 											<div class="form-group">
 
-												<select name="stops" id="stops" class="form-control" placehoder="Stops">
-													<option value=0>0</option>
-													<option value=1>1</option>
-													<option value=2+>2+</option>
+												<select name="stops" id="stops" class="form-control" placehoder="Stops" required>
+													<option value=1-stop>1-stop</option>
+													<option value=2+-stop>2+-stop</option>
+													<option value=non-stop>non-stop</option>
 												  </select>
 											</div>
 											</div>
@@ -115,7 +142,7 @@
 
 											<div class="col-md-12">
 												<div class="form-group">
-													<input type="string" class="form-control" name="arrivaltime" id="arrival time" placeholder="ex: 00:00">
+													<input type="time" class="form-control" name="arrivaltime" id="arrival time" required>
 												</div>
 											</div>
 
@@ -128,7 +155,7 @@
 											<div class="col-md-12">
 												<div class="form-group">
 	
-													<select name="type" id="type" class="form-control" placehoder="Type Of Ticket">
+													<select name="type" id="type" class="form-control" required>
 														<option value=business>business</option>
 														<option value=economy>economy</option>
 													  </select>
@@ -143,12 +170,11 @@
 												</div>
 											<div class="col-md-12">
 												<div class="form-group">
-													<select name="source" id="source" class="form-control" placehoder="source">
+													<select name="source" id="source" class="form-control" required>
 														<option value=Bangalore>Bangalore</option>
 														<option value=Hyderabad>Hyderabad</option>
 														<option value=Delhi>Delhi</option>
 														<option value=Mumbai>Mumbai</option>
-														<option value=Chennai>Chennai</option>
 														<option value=Kolkata>Kolkata</option>
 													  </select>
 												</div>
@@ -161,11 +187,10 @@
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
-													<select name="destination" id="destination" class="form-control" placehoder="destination">
+													<select name="destination" id="destination" class="form-control" required>
 														<option value=Bangalore>Bangalore</option>
 														<option value=Hyderabad>Hyderabad</option>
 														<option value=Delhi>Delhi</option>
-														<option value=Mumbai>Mumbai</option>
 														<option value=Chennai>Chennai</option>
 														<option value=Kolkata>Kolkata</option>
 													  </select>
@@ -192,7 +217,19 @@
 			</div>
 		</div>
 	</form>
-
+	<div class="footer">
+		<div class="container">
+		  <p>The Machine Learning Model And the Website Developed And Maintained By :</p>
+		  <div class="social-icons">
+		   <span style ="font-size: 15px">Mohammed Nour-Elden Abbas Ismael ||</span>
+		   <span style ="font-size: 15px">Nour Mohamed Hussein Kamaly ||</span>
+		   <span style ="font-size: 15px">Abdul-Rahman Sayed Ali Mohammed ||</span>
+		   <span style ="font-size: 15px">Nourhan Abdel-Karim Khalaf Abdel-Hafez ||</span>
+		   <span style ="font-size: 15px">Ahmed Mohammed Samy Mohammed</span>
+		  </div>
+		  <p class="copyright"><span>Ain Shams University Faculty of Computer And Information Science</span></p>
+		  <span class="copyright"><span>Scientific Computing Department</span></span>
+	</div>
 	</body>
 </html>
 
