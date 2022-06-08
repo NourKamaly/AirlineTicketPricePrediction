@@ -45,7 +45,8 @@ Random Forest got the best r2 score in the regression testing set so it was chos
 9. Ensemble Stacking model that consists of RF, bagging classifier , extra tree classifier (the best performing models) 
 
 # Deployment:
-Deployment was done using HTML & CSS & bootstrap for the interface and the backened was made by Flask
+Deployment was done using HTML & CSS &Javascript & bootstrap for the interface and the backened was made by Flask
+The Website Link: https://airline-ticket-prediction-app.herokuapp.com/
 
 ![heroku interface](https://user-images.githubusercontent.com/76780379/172643666-dc5c3204-a044-4518-bc44-263e113841d0.jpg)
 
