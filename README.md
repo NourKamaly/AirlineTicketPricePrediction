@@ -15,14 +15,14 @@ to prevent data leakage when splittling the data into the training and validatio
 7. Feature engineering applied to the other features
 8. Data transformation using the discrete cosine transform as this is a time series data (we suspected that the data may have been periodic)
 ![time series data](https://user-images.githubusercontent.com/76780379/170845001-c72271a3-f6b0-4886-bdf2-d2d2e7058622.jpg)
-Mutlliple encoders were used and this resulted in 3 different dataset and training was done on each one of them separatly
+Multiple encoders were used and this resulted in 3 different dataset and training was done on each one of them separatly
 # Modeling :
 
 10 models were used in Regression
 1. eXtreme Gradient Boosting Regressor
-2. Poissom Regressor
+2. Poisson Regressor
 3. Histogram Gradient Boosting Regressor
-4. Linear Regressiom
+4. Linear Regression
 5. Light Gradient Boosting Machine Regressor
 6. Gradient Boosting Regressor
 7. Extra Tree Regressor 
@@ -30,8 +30,8 @@ Mutlliple encoders were used and this resulted in 3 different dataset and traini
 9. Decision Tree Regressor
 10. Random Forest 
 
-Random Forest got the best r2 score in the regression testing set (0.9555) so it was chosen as the final regression model
-![Random Forest](https://user-images.githubusercontent.com/76780379/170845111-a8631ed3-92ed-4378-932c-eccfd3714c87.jpg)
+Random Forest got the best r2 score in the regression testing set so it was chosen as the final regression model
+![random forest mse](https://user-images.githubusercontent.com/76780379/172643425-76dfa607-f2ab-40cb-9249-55b336ab592d.jpg)
 
 9 models were used in classification
 1. Ada Boost
@@ -47,4 +47,7 @@ Random Forest got the best r2 score in the regression testing set (0.9555) so it
 # Deployment:
 Deployment was done using HTML & CSS & bootstrap for the interface and the backened was made by Flask
 
-![ML interface](https://user-images.githubusercontent.com/76780379/170869444-c5a1a0a8-7da9-4d71-b140-4ba6d892c25d.jpeg)
+![heroku interface](https://user-images.githubusercontent.com/76780379/172643666-dc5c3204-a044-4518-bc44-263e113841d0.jpg)
+
+
+![deployment](https://user-images.githubusercontent.com/76780379/172643755-30eec144-13b4-4d40-a2b9-9d7dc951da93.jpg)
