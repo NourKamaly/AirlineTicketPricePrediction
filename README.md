@@ -48,4 +48,4 @@ Random Forest got the best r2 score in the regression testing set so it was chos
 Deployment was done using HTML & CSS & Javascript & bootstrap for the interface and the backened was made by Flask
 The Website Link: https://airline-ticket-prediction-app.herokuapp.com/
 
-![website](https://user-images.githubusercontent.com/73191469/172853945-07a7ade1-2e05-4eff-aa4a-88c77e81b3f3.png)
+![website](https://user-images.githubusercontent.com/73191469/172854369-b3791318-0408-4e82-a2a0-7dd7ee7197a2.png)
