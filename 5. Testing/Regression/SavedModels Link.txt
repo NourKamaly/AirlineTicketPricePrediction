@@ -1,0 +1,5 @@
+Saved Models size was too large to be uploaded on github
+
+You can find the models used in testing compressed at :
+
+https://drive.google.com/file/d/15qIroikWFLMJH2D8XRyQQIxmfbFD15l1/view?usp=sharing
