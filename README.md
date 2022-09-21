@@ -1,5 +1,5 @@
 # AirlineTicketPricePrediction from End to End
-This machine learning project aims to do 2 main things separetly:
+This machine learning project aims to do 2 main things separately:
 1. Predicting the airline ticket price (regression problem).
 2. Classifying the ticket price range into 4 categories: cheap, moderate, expensive, very expensive.
 
@@ -8,7 +8,7 @@ These two parts rely on 10 features: date, airline, ch code (airline code), num 
 Data format: comma separated values file. 
 # Project Lifecycle
 1. Data Analysis
-2. Preprocesing
+2. Preprocessing
 3. Modeling
 4. Testing
 5. Models Analysis (not done yet)
